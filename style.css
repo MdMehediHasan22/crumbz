@@ -45,22 +45,23 @@ img{
     background-color: rgb(35, 2, 78);
     border-color: rgb(205, 167, 255);
   }
-h3::first-letter {
+/* h3::first-letter {
     font-size: 3rem;
     color: rebeccapurple;
     padding-right: 2px;
     font-weight: bold;
-  }
+  } */
   
 h3::first-line {
     color: purple;
+    font-size: 2rem;
   }
 
 /* navbar */
 .navbar {
   background: transparent;
   color: #fff;
-  padding: .8rem 2rem;
+  padding: 2.4rem 2rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -76,15 +77,26 @@ h3::first-line {
   
 }
 .navbar_logo img {
-  height: 60px; /* Adjust height as needed */
+  margin-top: 10px;
+  height: 150px; /* Adjust height as needed */
   display: block;
 }
-.navbar_container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 2rem;
-    
+.navbar_container {
+  display: flex;
+  justify-content: space-between; /* Keep it for now */
+  align-items: center;
+  text-align: center;
+  position: relative; /* Add this */
+}
+
+/* Center the logo */
+.navbar_logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar_menu {
+  margin-left: auto; /* Pushes menu to the right */
 }
 .navbar_menu-list{
     display: flex;
@@ -105,6 +117,7 @@ h3::first-line {
     top: 100%;
     left: 0;
     width: 100%;
+    
     background:#04e9b0 ;
     opacity: 0.95;
     padding: 3rem 2rem;
@@ -120,7 +133,7 @@ h3::first-line {
     font-size: 1.2rem;
   }
   .navbar_mobile-menu-items {
-    transform: translateX(100%);
+    transform: translateX(110%);
   }
   
   .navbar_mobile-menu-items.active {
@@ -134,7 +147,7 @@ h3::first-line {
 }
 
 .hero{
-  margin-top: 102px;
+  margin-top: 104px;
 }
 
 /* Carousel */
@@ -188,6 +201,7 @@ h3::first-line {
 
 .details_grid-description {
   line-height: 1.6;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -244,10 +258,7 @@ h3::first-line {
   .details_grid-button {
       margin-top: 1rem;
   }
-  .details_grid-heading {
-    font-size: 1.5rem;
-  
-  }
+
   .details_grid {
     
     gap: 0;
@@ -385,12 +396,35 @@ h3::first-line {
     /* Hero */
   }
     @media (max-width:768px){
+   .navbar{
+    padding: 0;
+   }
+
+    .navbar_logo {
+        position: relative;
+        left: auto;
+        transform: none;
+        /* Add some spacing */
+    }
+    .navbar_logo img{
+      height: 90px;
+    }
+
+    .navbar_menu {
+        display: none;
+         /* Hide menu on mobile by default */
+    }
+
+    .navbar_mobile-menu {
+        display: block;
+    }
       .navbar_container{
+        justify-content:end;
+        gap: 70px;
+
         padding: 0;
       }
-      .navbar_logo {
-        margin-right: ; /* Adds space from the left */
-    }
+
     
       .navbar_menu{
           display: none;
