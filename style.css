@@ -210,6 +210,10 @@ h3::first-line {
   padding: 1rem;
   border-radius: 8px;
 }
+.summary .section-lists p{
+  margin: 30px auto;
+  
+}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -327,7 +331,6 @@ h3::first-line {
   .inner-header {
     background: var(--primary-color);
     color: #fff;
-    height: 250px;
     padding-top: 8rem;
   }
   
