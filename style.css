@@ -33,7 +33,7 @@ img{
 }
 .btn {
     padding: 0.5rem 2rem;
-    background-color: rebeccapurple;
+    background-color: rgb(171, 112, 231);
     border: 2px solid transparent;
     color: #fff;
     font-weight: 600;
@@ -67,6 +67,7 @@ h3::first-line {
   left: 0;
   z-index: 1000;
   transition: background-color 0.5s ease-in-out;
+  
 }
 
 .navbar.navbar--scroll {
@@ -74,21 +75,22 @@ h3::first-line {
   backdrop-filter: blur(10px);
   
 }
+.navbar_logo img {
+  height: 60px; /* Adjust height as needed */
+  display: block;
+}
 .navbar_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 2rem;
     
-}
-.navbar_logo {
-    width: 81px;
-    height: 36px;
 }
 .navbar_menu-list{
     display: flex;
     align-items: center;
     gap: 2rem;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 .navbar_menu-link:hover,.navbar_mobile-menu-link:hover{
     color:rgb(255, 136, 255);
@@ -132,7 +134,7 @@ h3::first-line {
 }
 
 .hero{
-  margin-top: 80px;
+  margin-top: 102px;
 }
 
 /* Carousel */
@@ -217,6 +219,10 @@ h3::first-line {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .details_grid{
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .details_grid, .grid_layout {
       grid-template-columns: 1fr;
       text-align: center;
@@ -231,6 +237,7 @@ h3::first-line {
   }
 
   .details_grid-content {
+    margin-bottom: 45px;
       max-width: 100%;
   }
 
@@ -378,6 +385,13 @@ h3::first-line {
     /* Hero */
   }
     @media (max-width:768px){
+      .navbar_container{
+        padding: 0;
+      }
+      .navbar_logo {
+        margin-right: ; /* Adds space from the left */
+    }
+    
       .navbar_menu{
           display: none;
       }
