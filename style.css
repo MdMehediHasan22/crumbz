@@ -300,7 +300,9 @@ h3::first-line {
 .social-icons :hover{
   color: var(--secondary-color);
 }
-
+.whatsapp:hover{
+  color: var(--secondary-color);
+}
 .contact {
     flex: 1;
     min-width: 300px;
