@@ -11,7 +11,7 @@
     --tertiary-color:#2f2c3d;
 }
 html,body{
-    font-family: 'Open Sans',sans-serif;
+    font-family: "Playfair Display", serif;
     background-color: var(--primary-color);
     color: #000;
     line-height: 1.6;
